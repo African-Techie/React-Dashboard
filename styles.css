@@ -1,0 +1,37 @@
+.bodyContainer {
+  height: 100vh;
+  background: linear-gradient(white 50%, rgb(155, 189, 223));
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+.sidebar {
+  width: 200px;
+  box-shadow: 5px 20px 10px rgba(60, 60, 150, 0.25);
+  background-color: white;
+}
+.sidebar > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: transparent;
+  padding: 2px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.mainContent {
+  width: 500px;
+  background-color: blueviolet;
+}
+
+.sidebar.collapsed {
+  width: 90px;
+}
+
+.mainContent.expandedMainContent {
+    width: 610px;
+}

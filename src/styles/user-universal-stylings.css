@@ -1,0 +1,1312 @@
+:root {
+  --blue: #4d5bf9;
+  --darkblue: #2e3691;
+  --dodgerblue: dodgerblue;
+  --darktheme: rgb(45, 44, 44);
+  --darkthemeBlue: #a1a8f4;
+  --lighterdark: rgb(47, 46, 46);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styles to be applied to cards when dark mode is applied */
+  .darktheme-upper-cards .card,
+  .darktheme-lower-cards .card {
+    background-color: var(--lighterdark);
+    border-radius: 12px;
+  }
+
+  .darktheme-upper-cards div h4,
+  .darktheme-lower-cards div h4 {
+    color: white;
+  }
+
+  .darktheme-upper-cards div button,
+  .darktheme-lower-cards div button {
+    color: var(--darkthemeBlue);
+  }
+
+  .darktheme-upper-cards div button:hover,
+  .darktheme-lower-cards div button:hover {
+    color: var(--lighterdark);
+    width: 100%;
+    background-color: var(--darkthemeBlue);
+  }
+
+/* -----------------------------------------------DEFAULT SCREEN SIZES------------------------------------------------- */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: 992px) {
+  /* styling for the theme toggler button */
+  .themeToggler {
+    height: 17px;
+    position: absolute;
+    border: 1px solid black;
+    margin-left: 16px;
+    margin-top: 85vh;
+    background-color: transparent;
+    border-radius: 50px;
+    width: 35px;
+  }
+
+  .themeTogglerCircle {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  .themeToggler.darkmodeTheme {
+    background-color: black;
+    border-radius: 50px;
+    width: 35px;
+  }
+
+  .themeTogglerCircle.darkthemeCircle {
+    background-color: white;
+    margin-left: 55%;
+  }
+
+  /* when the sidebar width toggler button is clicked */
+  .themeTogglerCollapsed {
+    margin-left: 10px;
+  }
+
+  .themeTogglerCircleCollapsed {
+    margin-left: 0;
+  }
+
+  .darkthemeCircle.themeTogglerCircleCollapsed {
+    background-color: white;
+    margin-left: 55%;
+  }
+
+  /* --------------------------------------BODY CONTENT ------------------------------------------*/
+  .body-section {
+    width: 88%;
+    height: 100vh;
+    margin-left: 12%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .body-section.body-section-collapsed {
+    margin-left: 5%;
+    width: 95%;
+  }
+
+  .body-section.darktheme-body-section {
+    background: linear-gradient(rgb(73, 73, 73) 40%, rgb(26, 25, 25));
+  }
+
+  .body-section.darktheme-body-section p {
+    color: white;
+  }
+
+  /* -----------------------------------------SIDEBAR --------------------------------------------*/
+
+  /* General styles for the entire sidebar */
+  .sidebar-div {
+    display: flex;
+    flex-direction: column;
+    width: 12%;
+    height: 100vh;
+    background-color: aliceblue;
+    color: var(--blue);
+    box-shadow: 2px 10px 10px rgb(186, 201, 215);
+    position: absolute;
+  }
+
+  /* styling when darkmode theme is enabled */
+  .sidebar-div.darktheme-sidebar {
+    background-color: var(--lighterdark);
+    box-shadow: none;
+  }
+
+  .sidebar-div.darktheme-sidebar button,
+  .sidebar-div.darktheme-sidebar p {
+    color: var(--darkthemeBlue);
+  }
+
+  .sidebar-div.darktheme-sidebar button:hover {
+    color: var(--lighterdark);
+    background-color: var(--darkthemeBlue);
+  }
+
+  /* Styles for unordered lists within the sidebar */
+  .sidebar-div ul {
+    list-style: none;
+    margin-left: -30px;
+  }
+
+  /* Margin for list items in different lists */
+  .list-1 > li,
+  .list-2 > button {
+    margin-top: 3vh;
+  }
+
+  /* Margin for specific buttons and logos */
+  .list-2 button,
+  .logo {
+    margin-left: 12px;
+  }
+
+  .logo {
+    margin-top: 30px;
+  }
+
+  .list-2 button {
+    margin-top: 10vh;
+  }
+
+  /* Styling for all buttons */
+  button {
+    background-color: transparent;
+    border: none;
+    color: var(--blue);
+    font-size: 11px;
+    height: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  /* Hover effect for buttons */
+  button:hover {
+    background-color: var(--blue);
+    width: 90px;
+    color: aliceblue;
+    text-align: left;
+    height: 20px;
+    border-radius: 5px;
+  }
+
+  /* Margin for all Font Awesome icons */
+  .fa {
+    margin-right: 10px;
+  }
+
+  /* Styling for paragraphs */
+  p {
+    font-size: 13px;
+  }
+
+  /* Styling for the first part of the logo text*/
+  .logoFirstPart {
+    color: black;
+  }
+
+  .logoFirstPart.darkLogo {
+    color: white;
+  }
+  /* Styling for the collapsed logo */
+  .collapsed-logo {
+    margin-left: 12px;
+    margin-top: 30px;
+  }
+
+  /* Styling for toggle and expansion buttons within the upper sidebar */
+  #toggleSidebar,
+  #expandSidebar {
+    font-size: 30px;
+    margin-top: 17px;
+    position: absolute;
+  }
+
+  #toggleSidebar {
+    margin-left: 9%;
+  }
+
+  #expandSidebar {
+    margin-left: 3%;
+  }
+
+  /* Hover effect for the same buttons */
+  #toggleSidebar:hover,
+  #expandSidebar:hover {
+    background-color: transparent;
+    color: black;
+    width: 10px;
+  }
+
+  .sidebar-expand {
+    display: none;
+  }
+
+  /* behavior of the above buttons when darkmode theme is applied */
+  .darkmode-upper-sidebar-btn {
+    color: white;
+  }
+
+  /* Add a new class for the collapsed state */
+  .sidebar-div.sidebar-collapsed {
+    width: 5%;
+  }
+
+  /* Collapse the logo text and adjust other styles on sidebar collapse */
+  .sidebar-div.sidebar-collapsed .logo {
+    display: none;
+  }
+
+  .sidebar-div.sidebar-collapsed .list-1 span,
+  .sidebar-div.sidebar-collapsed .list-2 button span {
+    display: none;
+  }
+
+  .sidebar-div.sidebar-collapsed .list-1 button:hover,
+  .sidebar-div.sidebar-collapsed .list-2 button:hover {
+    color: black;
+    border-bottom: 1px solid black;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .sidebar-div.sidebar-collapsed .list-1 i.fa,
+  .sidebar-div.sidebar-collapsed .list-2 i.fa {
+    transform: scale(1.8);
+  }
+
+  /*-----------------------------------------------NAVBAR-------------------------------------------------*/
+
+  /* styling for the nav bar */
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+
+  .darktheme-nav-items .right-navbar {
+    color: white;
+  }
+  /* styling for the right section of the navbar */
+  .nav-items div:nth-child(2) {
+    font-size: 12px;
+    margin-top: -25px;
+  }
+
+  .nav-items div img {
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .right-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* styling for the left section of the navbar */
+  .left-navbar p:nth-child(1) {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: bold;
+  }
+
+  .dark-left-navbar p:nth-child(1) {
+    color: var(--darkthemeBlue);
+  }
+
+  .left-navbar p:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -5px;
+  }
+
+  /* ------------------------------------------------------- MAIN CONTENT ----------------------------------------------------------- */
+
+  .card {
+    box-shadow: 20px 20px 40px rgba(60, 60, 150, 0.25);
+    border-radius: 12px;
+    background-color: aliceblue;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  /* general style for the hover effect of all buttons inside the cards  */
+  .card button:hover {
+    width: 100%;
+  }
+
+  /* styles for the cards in the upper section */
+  .upper-cards {
+    display: flex;
+  }
+  .upper-cards div {
+    width: 50%;
+    height: 25vh;
+    margin-bottom: 20px;
+  }
+
+  .upper-cards div:nth-child(1) {
+    margin-right: 20px;
+  }
+
+  .upper-cards div div {
+    width: 100%;
+  }
+
+  /* styles for the cards in the lower section */
+  .lower-cards {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .lower-cards > div:nth-child(1) {
+    width: 50%;
+    height: 51vh;
+  }
+
+  .lower-right-cards {
+    width: 50%;
+    height: 51vh;
+    margin-left: 20px;
+    display: flex;
+    background-color: transparent;
+    flex-direction: column;
+  }
+
+  .small-card {
+    width: 100%;
+    height: 26vh;
+    display: flex;
+    background-color: transparent;
+  }
+
+  /* styles for the circular progress bars */
+  .progress-bars {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    display: grid;
+    place-items: center;
+    margin-right: 20px;
+  }
+
+  .progress-bars:nth-child(3) {
+    margin-right: 0;
+  }
+
+  .progress-bars h5 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: rgb(139, 136, 136);
+  }
+
+  /* styles for the banner */
+  .banner {
+    width: 100%;
+    height: 25vh;
+    margin-top: 20px;
+    background: linear-gradient(rgb(27, 27, 144) 10%, rgb(10, 67, 124));
+    display: flex;
+    justify-content: space-around;
+    color: white;
+  }
+
+  .banner div button {
+    width: 100px;
+    height: 40px;
+    background-color: aliceblue;
+    margin-left: -20px;
+    margin-top: 41px;
+    text-align: center;
+    color: #2e3691;
+  }
+
+  .banner div button:hover {
+    border-radius: 0;
+    color: black;
+    text-align: center;
+  }
+
+  .banner > div:nth-child(1) {
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+
+  .banner > div div {
+    display: flex;
+    font-size: 30px;
+    margin-top: -55px;
+  }
+
+  .banner-img {
+    width: 130px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+}
+
+/* --------------------------------------------------BREAKPOINT 1  MEDIUM DEVICES------------------------------------------------------- */
+
+/* Medium devices (769px to 991px) */
+@media (min-width: 769px) {
+  @media (max-width: 992px) {
+    /* styling for the theme toggler button */
+    .themeToggler {
+      height: 17px;
+      position: absolute;
+      border: 1px solid black;
+      margin-left: 16px;
+      margin-top: 85vh;
+      background-color: transparent;
+      border-radius: 50px;
+      width: 35px;
+    }
+
+    .themeTogglerCircle {
+      position: relative;
+      width: 15px;
+      height: 15px;
+      background-color: black;
+      border-radius: 50%;
+    }
+
+    .themeToggler.darkmodeTheme {
+      background-color: black;
+      border-radius: 50px;
+      width: 35px;
+    }
+
+    .themeTogglerCircle.darkthemeCircle {
+      background-color: white;
+      margin-left: 55%;
+    }
+
+    /* when the sidebar width toggler button is clicked */
+    .themeTogglerCollapsed {
+      margin-left: 10px;
+    }
+
+    .themeTogglerCircleCollapsed {
+      margin-left: 0;
+    }
+
+    .darkthemeCircle.themeTogglerCircleCollapsed {
+      background-color: white;
+      margin-left: 55%;
+    }
+
+    /* --------------------------------------BODY CONTENT ------------------------------------------*/
+    .body-section {
+      width: 80%;
+      height: auto;
+      margin-left: 20%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .body-section.body-section-collapsed {
+      margin-left: 10%;
+      width: 90%;
+    }
+
+    .body-section.darktheme-body-section {
+      background: linear-gradient(rgb(73, 73, 73) 40%, rgb(26, 25, 25));
+    }
+
+    .body-section.darktheme-body-section p {
+      color: white;
+    }
+
+    /* -----------------------------------------SIDEBAR --------------------------------------------*/
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* General styles for the entire sidebar */
+    .sidebar-div {
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+      height: 183vh;
+      background-color: aliceblue;
+      color: var(--blue);
+      box-shadow: 2px 10px 10px rgb(186, 201, 215);
+      position: absolute;
+    }
+
+    /* styling when darkmode theme is enabled */
+    .sidebar-div.darktheme-sidebar {
+      background-color: var(--lighterdark);
+      box-shadow: none;
+    }
+
+    .sidebar-div.darktheme-sidebar button,
+    .sidebar-div.darktheme-sidebar p {
+      color: var(--darkthemeBlue);
+    }
+
+    .sidebar-div.darktheme-sidebar button:hover {
+      color: var(--lighterdark);
+      background-color: var(--darkthemeBlue);
+    }
+
+    /* Styles for unordered lists within the sidebar */
+    .sidebar-div ul {
+      list-style: none;
+      margin-left: -30px;
+    }
+
+    /* Margin for list items in different lists */
+    .list-1 > li,
+    .list-2 > button {
+      margin-top: 3vh;
+    }
+
+    /* Margin for specific buttons and logos */
+    .list-2 button,
+    .logo {
+      margin-left: 12px;
+    }
+
+    .logo {
+      margin-top: 30px;
+    }
+
+    .list-2 button {
+      margin-top: 10vh;
+    }
+
+    /* Styling for all buttons */
+    button {
+      background-color: transparent;
+      border: none;
+      color: var(--blue);
+      font-size: 11px;
+      height: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Hover effect for buttons */
+    button:hover {
+      background-color: var(--blue);
+      width: 90px;
+      color: aliceblue;
+      text-align: left;
+      height: 20px;
+      border-radius: 5px;
+    }
+
+    /* Margin for all Font Awesome icons */
+    .fa {
+      margin-right: 10px;
+    }
+
+    /* Styling for paragraphs */
+    p {
+      font-size: 13px;
+    }
+
+    /* Styling for the first part of the logo text*/
+    .logoFirstPart {
+      color: black;
+    }
+
+    .logoFirstPart.darkLogo {
+      color: white;
+    }
+    /* Styling for the collapsed logo */
+    .collapsed-logo {
+      margin-left: 12px;
+      margin-top: 30px;
+    }
+
+    /* Styling for toggle and expansion buttons within the upper sidebar */
+    #toggleSidebar,
+    #expandSidebar {
+      font-size: 30px;
+      margin-top: 17px;
+      position: absolute;
+    }
+
+    #toggleSidebar {
+      margin-left: 15%;
+    }
+
+    #expandSidebar {
+      margin-left: 7%;
+    }
+
+    /* Hover effect for the same buttons */
+    #toggleSidebar:hover,
+    #expandSidebar:hover {
+      background-color: transparent;
+      color: black;
+      width: 10px;
+    }
+
+    .sidebar-expand {
+      display: none;
+    }
+
+    /* behavior of the above buttons when darkmode theme is applied */
+    .darkmode-upper-sidebar-btn {
+      color: white;
+    }
+
+    /* Add a new class for the collapsed state */
+    .sidebar-div.sidebar-collapsed {
+      width: 10%;
+    }
+
+    /* Collapse the logo text and adjust other styles on sidebar collapse */
+    .sidebar-div.sidebar-collapsed .logo {
+      display: none;
+    }
+
+    .sidebar-div.sidebar-collapsed .list-1 span,
+    .sidebar-div.sidebar-collapsed .list-2 button span {
+      display: none;
+    }
+
+    .sidebar-div.sidebar-collapsed .list-1 button:hover,
+    .sidebar-div.sidebar-collapsed .list-2 button:hover {
+      color: black;
+      border-bottom: 1px solid black;
+      width: 30px;
+      background-color: transparent;
+      border: none;
+    }
+
+    .sidebar-div.sidebar-collapsed .list-1 i.fa,
+    .sidebar-div.sidebar-collapsed .list-2 i.fa {
+      transform: scale(1.8);
+    }
+
+    /*-----------------------------------------------NAVBAR-------------------------------------------------*/
+
+    /* styling for the nav bar */
+    .nav-items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: transparent;
+    }
+
+    .darktheme-nav-items .right-navbar {
+      color: white;
+    }
+    /* styling for the right section of the navbar */
+    .nav-items div:nth-child(2) {
+      font-size: 12px;
+      margin-top: -25px;
+    }
+
+    .nav-items div img {
+      width: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .right-navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* styling for the left section of the navbar */
+    .left-navbar p:nth-child(1) {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .dark-left-navbar p:nth-child(1) {
+      color: var(--darkthemeBlue);
+    }
+
+    .left-navbar p:nth-child(2) {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: -5px;
+    }
+
+    /* ------------------------------------------------------- MAIN CONTENT ----------------------------------------------------------- */
+
+    .card {
+      box-shadow: 20px 20px 40px rgba(60, 60, 150, 0.25);
+      border-radius: 12px;
+      background-color: aliceblue;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    /* general style for the hover effect of all buttons inside the cards  */
+    .card button:hover {
+      width: 100%;
+    }
+
+    /* styles for the cards in the upper section */
+    .upper-cards {
+      display: flex;
+      flex-direction: column;
+    }
+    .upper-cards div {
+      width: 100%;
+      height: 25vh;
+      margin-bottom: 20px;
+    }
+
+    .upper-cards div:nth-child(1) {
+      margin-right: 20px;
+    }
+
+    .upper-cards div div {
+      width: 100%;
+    }
+
+    /* styles for the cards in the lower section */
+    .lower-cards {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lower-cards > div:nth-child(1) {
+      width: 100%;
+      height: 51vh;
+    }
+
+    .lower-right-cards {
+      width: 100%;
+      height: 51vh;
+      margin-top: 20px;
+      display: flex;
+      background-color: transparent;
+      flex-direction: column;
+    }
+
+    .small-card {
+      width: 100%;
+      height: 26vh;
+      display: flex;
+      background-color: transparent;
+    }
+
+    /* styles for the circular progress bars */
+    .progress-bars {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      display: grid;
+      place-items: center;
+      margin-right: 20px;
+    }
+
+    .progress-bars:nth-child(3) {
+      margin-right: 0;
+    }
+
+    .progress-bars h5 {
+      margin-top: 3px;
+      margin-bottom: 3px;
+      color: rgb(139, 136, 136);
+    }
+
+    /* styles for the banner */
+    .banner {
+      width: 100%;
+      height: 25vh;
+      margin-top: 20px;
+      background: linear-gradient(rgb(27, 27, 144) 10%, rgb(10, 67, 124));
+      display: flex;
+      justify-content: space-around;
+      color: white;
+    }
+
+    .banner div button {
+      width: 100px;
+      height: 40px;
+      background-color: aliceblue;
+      margin-left: -20px;
+      margin-top: 41px;
+      text-align: center;
+      color: #2e3691;
+    }
+
+    .banner div button:hover {
+      border-radius: 0;
+      color: black;
+      text-align: center;
+    }
+
+    .banner > div:nth-child(1) {
+      margin-left: 30px;
+      margin-bottom: 40px;
+    }
+
+    .banner > div div {
+      display: flex;
+      font-size: 30px;
+      margin-top: -55px;
+    }
+
+    .banner-img {
+      width: 130px;
+      height: auto;
+      margin-top: 10px;
+      margin-right: 20px;
+    }
+
+    /* Styles to be applied to cards when dark mode is applied */
+    .darktheme-upper-cards .card,
+    .darktheme-lower-cards .card {
+      background-color: var(--lighterdark);
+      border-radius: 12px;
+    }
+
+    .darktheme-upper-cards div h4,
+    .darktheme-lower-cards div h4 {
+      color: white;
+    }
+
+    .darktheme-upper-cards div button,
+    .darktheme-lower-cards div button {
+      color: var(--darkthemeBlue);
+    }
+
+    .darktheme-upper-cards div button:hover,
+    .darktheme-lower-cards div button:hover {
+      color: var(--lighterdark);
+      width: 100%;
+      background-color: var(--darkthemeBlue);
+    }
+  }
+}
+
+/* --------------------------------------------------BREAKPOINT 2  SMALL DEVICES------------------------------------------------------- */
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  /* styling for the theme toggler button */
+  .themeToggler {
+    height: 15px;
+    position: absolute;
+    border: 1px solid black;
+    margin-left: 50%;
+    margin-top: 7vh;
+    background-color: transparent;
+    border-radius: 50px;
+    width: 35px;
+  }
+
+  .themeTogglerCircle {
+    position: relative;
+    width: 13px;
+    height: 13px;
+    background-color: black;
+    border-radius: 50%;
+  }
+
+  .themeToggler.darkmodeTheme {
+    background-color: black;
+    border-radius: 50px;
+    width: 35px;
+  }
+
+  .themeTogglerCircle.darkthemeCircle {
+    background-color: white;
+    margin-left: 60%;
+  }
+
+  /* --------------------------------------BODY CONTENT ------------------------------------------*/
+  .body-section {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .body-section.body-section-collapsed {
+    margin-top: 0;
+  }
+
+  .body-section.darktheme-body-section {
+    background: linear-gradient(rgb(73, 73, 73) 40%, rgb(45, 45, 45));
+  }
+
+  .body-section.darktheme-body-section p {
+    color: white;
+  }
+
+  /* -----------------------------------------SIDEBAR --------------------------------------------*/
+
+  /* General styles for the entire sidebar */
+  .sidebar-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 25vh;
+    margin-top: 0;
+    background-color: aliceblue;
+    color: var(--blue);
+    box-shadow: 2px 10px 10px rgb(186, 201, 215);
+    position: relative;
+  }
+
+  /* styling when darkmode theme is enabled */
+  .sidebar-div.darktheme-sidebar {
+    background-color: var(--lighterdark);
+    box-shadow: none;
+  }
+
+  .sidebar-div.darktheme-sidebar button,
+  .sidebar-div.darktheme-sidebar p {
+    color: var(--darkthemeBlue);
+  }
+
+  .sidebar-div.darktheme-sidebar button:hover {
+    border-bottom: 1px solid white;
+    color: white;
+  }
+
+  /* Styles for unordered lists within the sidebar */
+  .sidebar-div ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 25vh;
+  }
+
+  .sidebar-div ul li {
+    margin-bottom: 20px;
+    width: 20%;
+  }
+
+  .sidebar-div button:hover {
+    background-color: transparent;
+    color: black;
+    width: 100%;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+  }
+
+  /* Margin for specific buttons and logos */
+  .list-2 {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  hr {
+    display: none;
+  }
+
+  /* Styling for all buttons */
+  button {
+    background-color: transparent;
+    border: none;
+    color: var(--blue);
+    font-size: 11px;
+    height: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  /* Hover effect for buttons */
+  button:hover {
+    background-color: var(--blue);
+    width: 90px;
+    color: aliceblue;
+    text-align: left;
+    height: 20px;
+    border-radius: 5px;
+  }
+
+  #expandSidebar {
+    position: absolute;
+    transform: rotate(90deg);
+    font-size: 25px;
+    font-weight: bold;
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 22px;
+  }
+
+  #expandSidebar:hover {
+    transform: rotate(90deg);
+    height: 30px;
+    margin-left: 16px;
+    margin-top: 11px;
+    padding: 0;
+    color: black;
+    background-color: transparent;
+  }
+
+  #toggleSidebar {
+    position: absolute;
+    font-size: 25px;
+    transform: rotate(90deg);
+    margin-left: 25px;
+    margin-top: -14px;
+  }
+
+  #toggleSidebar:hover {
+    transform: rotate(90deg);
+    height: 30px;
+    margin-left: -10px;
+    margin-top: 16px;
+    padding: 0;
+    color: black;
+    background-color: transparent;
+  }
+
+  /* Margin for all Font Awesome icons */
+  .fa {
+    margin-right: 10px;
+  }
+
+  /* Styling for paragraphs */
+  p {
+    font-size: 13px;
+  }
+
+  /* Styling for the first part of the logo text*/
+  .logoFirstPart {
+    color: black;
+  }
+
+  .logoFirstPart.darkLogo {
+    color: white;
+  }
+  /* Styling for the collapsed logo */
+  .collapsed-logo {
+    margin-left: 12px;
+    margin-top: 30px;
+  }
+
+  /* Styling for toggle and expansion button  */
+
+  .sidebar-expand {
+    display: none;
+  }
+
+  /* behavior of the above buttons when darkmode theme is applied */
+  .darkmode-upper-sidebar-btn {
+    color: white;
+  }
+
+  /* Add a new class for the collapsed state */
+  .sidebar-div.sidebar-collapsed {
+    width: 100%;
+    height: 0;
+    display: none;
+  }
+
+  /* Collapse the logo text and adjust other styles on sidebar collapse */
+  .sidebar-div.sidebar-collapsed .logo {
+    display: none;
+  }
+
+  .sidebar-div.sidebar-collapsed .list-1 button:hover,
+  .sidebar-div.sidebar-collapsed .list-2 button:hover {
+    color: black;
+    border-bottom: 1px solid black;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+  }
+
+  /*-----------------------------------------------NAVBAR-------------------------------------------------*/
+
+  /* styling for the nav bar */
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+
+  .darktheme-nav-items .right-navbar {
+    color: white;
+  }
+  /* styling for the right section of the navbar */
+  .nav-items div:nth-child(2) {
+    font-size: 12px;
+    margin-top: -25px;
+  }
+
+  .nav-items div img {
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .right-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* styling for the left section of the navbar */
+  .left-navbar p:nth-child(1) {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: bold;
+  }
+
+  .dark-left-navbar p:nth-child(1) {
+    color: var(--darkthemeBlue);
+  }
+
+  .left-navbar p:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -5px;
+  }
+
+  /* ------------------------------------------------------- MAIN CONTENT ----------------------------------------------------------- */
+
+  .card {
+    box-shadow: 20px 20px 40px rgba(60, 60, 150, 0.25);
+    border-radius: 12px;
+    background-color: aliceblue;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  /* general style for the hover effect of all buttons inside the cards  */
+  .card button:hover {
+    width: 100%;
+  }
+
+  /* styles for the cards in the upper section */
+  .upper-cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .upper-cards div {
+    width: 100%;
+    height: 25vh;
+    margin-bottom: 20px;
+  }
+
+  .upper-cards div:nth-child(1) {
+    margin-right: 20px;
+  }
+
+  .upper-cards div div {
+    width: 100%;
+  }
+
+  /* styles for the cards in the lower section */
+  .lower-cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lower-cards > div:nth-child(1) {
+    width: 100%;
+    height: 51vh;
+  }
+
+  .lower-right-cards {
+    width: 100%;
+    height: 51vh;
+    margin-top: 20px;
+    display: flex;
+    background-color: transparent;
+    flex-direction: column;
+  }
+
+  .small-card {
+    width: 100%;
+    height: 26vh;
+    display: flex;
+    background-color: transparent;
+  }
+
+  /* styles for the circular progress bars */
+  .progress-bars {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    display: grid;
+    place-items: center;
+    margin-right: 20px;
+  }
+
+  .progress-bars:nth-child(3) {
+    margin-right: 0;
+  }
+
+  .progress-bars h5 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: rgb(139, 136, 136);
+  }
+
+  /* styles for the banner */
+  .banner {
+    width: 100%;
+    height: 25vh;
+    margin-top: 20px;
+    background: linear-gradient(rgb(27, 27, 144) 10%, rgb(10, 67, 124));
+    display: flex;
+    justify-content: space-around;
+    color: white;
+  }
+
+  .banner div button {
+    width: 100px;
+    height: 40px;
+    background-color: aliceblue;
+    margin-left: -20px;
+    margin-top: 41px;
+    text-align: center;
+    color: #2e3691;
+  }
+
+  .banner div button:hover {
+    border-radius: 0;
+    color: black;
+    text-align: center;
+  }
+
+  .banner > div:nth-child(1) {
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+
+  .banner > div div {
+    display: flex;
+    font-size: 30px;
+    margin-top: -55px;
+  }
+
+  .banner-img {
+    width: 130px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+}
