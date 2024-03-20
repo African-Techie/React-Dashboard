@@ -12,29 +12,32 @@
 }
 
 /* Styles to be applied to cards when dark mode is applied */
-  .darktheme-upper-cards .card,
-  .darktheme-lower-cards .card {
-    background-color: var(--lighterdark);
-    border-radius: 12px;
-  }
+.darktheme-upper-cards .card,
+.darktheme-lower-cards .card {
+  background-color: var(--lighterdark);
+  border-radius: 12px;
+}
 
-  .darktheme-upper-cards div h4,
-  .darktheme-lower-cards div h4 {
-    color: white;
-  }
+.darktheme-upper-cards div h4,
+.darktheme-lower-cards div h4 {
+  color: white;
+}
 
-  .darktheme-upper-cards div button,
-  .darktheme-lower-cards div button {
-    color: var(--darkthemeBlue);
-  }
+.darktheme-upper-cards div button,
+.darktheme-lower-cards div button {
+  color: var(--darkthemeBlue);
+}
 
-  .darktheme-upper-cards div button:hover,
-  .darktheme-lower-cards div button:hover {
-    color: var(--lighterdark);
-    width: 100%;
-    background-color: var(--darkthemeBlue);
-  }
+.darktheme-upper-cards div button:hover,
+.darktheme-lower-cards div button:hover {
+  color: var(--lighterdark);
+  width: 100%;
+  background-color: var(--darkthemeBlue);
+}
 
+.darktheme-table {
+  color: white;
+}
 /* -----------------------------------------------DEFAULT SCREEN SIZES------------------------------------------------- */
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
@@ -46,7 +49,7 @@
     position: absolute;
     border: 1px solid black;
     margin-left: 16px;
-    margin-top: 85vh;
+    margin-top: -15vh;
     background-color: transparent;
     border-radius: 50px;
     width: 35px;
@@ -366,6 +369,9 @@
   .lower-cards > div:nth-child(1) {
     width: 50%;
     height: 51vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    padding-bottom: 20px;
   }
 
   .lower-right-cards {
@@ -409,37 +415,22 @@
     width: 100%;
     height: 25vh;
     margin-top: 20px;
-    background: linear-gradient(rgb(27, 27, 144) 10%, rgb(10, 67, 124));
+    background: linear-gradient(rgb(27, 27, 144) 10%, rgb(36, 106, 177));
     display: flex;
     justify-content: space-around;
     color: white;
   }
 
-  .banner div button {
-    width: 100px;
-    height: 40px;
-    background-color: aliceblue;
-    margin-left: -20px;
-    margin-top: 41px;
-    text-align: center;
-    color: #2e3691;
-  }
-
-  .banner div button:hover {
-    border-radius: 0;
-    color: black;
-    text-align: center;
-  }
-
-  .banner > div:nth-child(1) {
-    margin-left: 30px;
-    margin-bottom: 40px;
+  .banner > div {
+   
+    margin-left: 20px;
+    margin-right: -20px;
   }
 
   .banner > div div {
     display: flex;
     font-size: 30px;
-    margin-top: -55px;
+    margin-top: -45px;
   }
 
   .banner-img {
@@ -785,6 +776,8 @@
     .lower-cards > div:nth-child(1) {
       width: 100%;
       height: 51vh;
+      overflow-y: auto;
+      overflow-x: auto;
     }
 
     .lower-right-cards {
@@ -904,7 +897,7 @@
     position: absolute;
     border: 1px solid black;
     margin-left: 50%;
-    margin-top: 7vh;
+    margin-top: -20vh;
     background-color: transparent;
     border-radius: 50px;
     width: 35px;
@@ -931,7 +924,7 @@
 
   /* --------------------------------------BODY CONTENT ------------------------------------------*/
   .body-section {
-    width: 100%;
+    width: 100vw;
     margin-left: 0;
     display: flex;
     flex-direction: column;
@@ -957,7 +950,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 25vh;
+    height: auto;
     margin-top: 0;
     background-color: aliceblue;
     color: var(--blue);
@@ -985,14 +978,14 @@
   .sidebar-div ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    height: 25vh;
+    height: auto;
   }
 
   .sidebar-div ul li {
     margin-bottom: 20px;
-    width: 20%;
+    width: 40vw;
   }
 
   .sidebar-div button:hover {
@@ -1227,6 +1220,8 @@
   .lower-cards > div:nth-child(1) {
     width: 100%;
     height: 51vh;
+    overflow-y: auto;
+    overflow-x: auto;
   }
 
   .lower-right-cards {

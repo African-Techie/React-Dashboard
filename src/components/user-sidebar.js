@@ -1,67 +1,49 @@
 import React, {
-  useReducer,
   useImperativeHandle,
   forwardRef,
-  useState,
+  useContext
 } from "react";
 import "../styles/user-universal-stylings.css";
 import "../styles/font-awesome/css/font-awesome.css";
+import { DashboardContext } from "./DashboardContext";
 // import logo from "../images/eddie-ogyner-logo.png";
-
-// the function to alter the sidebar states
-const handleToggle = (state, action) => {
-  switch (action.type) {
-    case "toggleSidebar":
-      return {
-        sidebarCollapsed: !state.sidebarCollapsed,
-      };
-    default:
-      return state;
-  }
-};
 
 // the component
 const UserSidebar = forwardRef((props, ref) => {
-  // setting the default state of dark mode as false
-  const [darkmodeActivated, setDarkmodeActivated] = useState(false);
-
-  // useReducer hook to handle sidebar collapse/ expansion
-  const [state, dispatch] = useReducer(handleToggle, {
-    sidebarCollapsed: false,
-  });
+  
 
   useImperativeHandle(ref, () => ({
     handleToggleSidebar() {
-      dispatch({ type: "toggleSidebar" });
+      setSidebarCollapse(!sidebarCollapse)
     },
 
     handleThemeColor() {
-      setDarkmodeActivated(!darkmodeActivated);
+      setDarkThemeToggle(!darkThemeToggle)
     },
   }));
+
+  const {darkThemeToggle, setDarkThemeToggle, sidebarCollapse, setSidebarCollapse} = useContext(DashboardContext)
 
   return (
     <div
       className={`sidebar-div 
-        ${!darkmodeActivated ? "" : "darktheme-sidebar"}
-        ${!state.sidebarCollapsed ? "" : "sidebar-collapsed"} 
+        ${!darkThemeToggle ? "" : "darktheme-sidebar"}
+        ${!sidebarCollapse ? "" : "sidebar-collapsed"} 
       `}
     >
       <p
-        className={`logo ${state.sidebarCollapsed ? "sidebar-collapsed" : ""}`}
+        className={`logo ${sidebarCollapse ? "sidebar-collapsed" : ""}`}
       >
-        <span
-          className={`logoFirstPart ${!darkmodeActivated ? "" : "darkLogo"}`}
-        >
+        <span className={`logoFirstPart ${!darkThemeToggle ? "" : "darkLogo"}`}>
           Games
         </span>
         <b>Hub</b>
       </p>
 
-      {state.sidebarCollapsed && (
+      {sidebarCollapse && (
         <p className="collapsed-logo">
           <span
-            className={`logoFirstPart ${!darkmodeActivated ? "" : "darkLogo"}`}
+            className={`logoFirstPart ${!darkThemeToggle ? "" : "darkLogo"}`}
           >
             G
           </span>

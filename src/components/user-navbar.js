@@ -1,23 +1,24 @@
-import React, { useState, useImperativeHandle, forwardRef } from "react";
+import React, { useImperativeHandle, useContext, forwardRef } from "react";
+import { DashboardContext } from "./DashboardContext";
 import "../styles/user-universal-stylings.css";
 import "../styles/font-awesome/css/font-awesome.css";
 import userImage from "../images/1662134505794~2 (2).jpg";
 
 const Navbar = forwardRef((props, ref) => {
-  const [darkmodeActivated, setDarkmodeActivated] = useState(false);
+  const {darkThemeToggle, setDarkThemeToggle} = useContext(DashboardContext)
 
   useImperativeHandle(ref, () => ({
     handleThemeColor() {
-      setDarkmodeActivated(!darkmodeActivated);
+      setDarkThemeToggle(!darkThemeToggle);
     },
   }));
   return (
     <nav
-      className={`nav-items ${!darkmodeActivated ? "" : "darktheme-nav-items"}`}
+      className={`nav-items ${!darkThemeToggle ? "" : "darktheme-nav-items"}`}
     >
       <div
         className={`left-navbar ${
-          !darkmodeActivated ? "" : "dark-left-navbar"
+          !darkThemeToggle ? "" : "dark-left-navbar"
         }`}
       >
         <p>
